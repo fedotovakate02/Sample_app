@@ -1,6 +1,5 @@
-
-<h1>
-<%= gravatar_for @user %>
-<%= @user.name %>
+puts <h1>
+<%= "gravatar_for current_user" if current_user.present? %>
+<%= current_user&.name %>
 </h1>
-<h2><%= @user.email %></h2>
+<h2><%= current_user&.email %></h2>
