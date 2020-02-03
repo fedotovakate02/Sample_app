@@ -17,5 +17,13 @@ class PasswordResetsController < ApplicationController
 
 
   def edit
+  	@user = User.find_by(email: params[:email])
+  end
+
+  def update
+  	@user = User.find_by(email: params[:email])
+  	@user.update password: params[:user][:password]
+  	flash[:info] = "Password update!"
+
   end
 end
