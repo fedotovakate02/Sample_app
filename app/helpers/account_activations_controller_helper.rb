@@ -1,0 +1,2 @@
+module AccountActivationsControllerHelper
+end
